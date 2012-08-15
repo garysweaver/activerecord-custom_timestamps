@@ -25,15 +25,15 @@ To stay up-to-date, periodically run:
 
 Custom Timestamps lets you do the following in your model to specify which columns should be used for created_at and updated_at:
 
-    self.created_timestamp :your_created_at_or_created_on_column
-    self.updated_timestamp :your_updated_at_or_updated_on_column
+    self.created_timestamp :manufactured_on
+    self.updated_timestamp :modded_on
 
 It also supports updating multiple columns.
 
-    self.created_timestamp [:column1, :column2]
-    self.updated_timestamp [:column3, :column4]
+    self.created_timestamp [:manufactured_on, :amalgamated_at]
+    self.updated_timestamp [:redesigned_at, :redesign_release_date]
 
-Note: do not specify updated_at or updated_on in self.updated_at nor created_at or created_on in self.created_at as they are already updated by ActiveRecord, created_at, or created_on)
+You don't need to specify updated_at or updated_on in self.updated_at, and you don't need to specify created_at or created_on in self.created_at. Those columns are still updated by ActiveRecord (unless you overrode that).
 
 ### Usage
 
