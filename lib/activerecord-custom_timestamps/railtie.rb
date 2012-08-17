@@ -1,4 +1,4 @@
-require 'custom_timestamps'
+require 'activerecord-custom_timestamps'
 
 module CustomTimestamps
   class Railtie < Rails::Railtie

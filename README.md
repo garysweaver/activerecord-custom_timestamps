@@ -11,15 +11,11 @@ It uses the Rails 3.0-4.0 self.record_timestamps to determine if it should updat
 
 In your Rails 3+ project, add this to your Gemfile:
 
-    gem 'custom_timestamps', :git => 'git://github.com/garysweaver/custom_timestamps.git'
+    gem 'activerecord-custom_timestamps', :git => 'git://github.com/garysweaver/activerecord-custom_timestamps.git'
 
 Then run:
 
     bundle install
-
-To stay up-to-date, periodically run:
-
-    bundle update custom_timestamps
 
 ### Configuration
 
