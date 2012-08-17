@@ -9,7 +9,11 @@ It uses the Rails 3.0-4.0 self.record_timestamps to determine if it should updat
 
 ### Setup
 
-In your Rails 3+ project, add this to your Gemfile:
+In your ActiveRecord/Rails 3.1+ project, add this to your Gemfile:
+
+    gem 'activerecord-custom_timestamps'
+
+For the development version:
 
     gem 'activerecord-custom_timestamps', :git => 'git://github.com/garysweaver/activerecord-custom_timestamps.git'
 
