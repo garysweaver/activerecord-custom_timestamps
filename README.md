@@ -43,4 +43,4 @@ Just try to save and update an existing model that has the custom timestamp colu
 
 Copyright (c) 2012 Gary S. Weaver, released under the [MIT license][lic].
 
-[lic]: http://github.com/garysweaver/custom_timestamps/blob/master/LICENSE
+[lic]: http://github.com/garysweaver/activerecord-custom_timestamps/blob/master/LICENSE
