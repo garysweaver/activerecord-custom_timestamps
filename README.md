@@ -23,6 +23,8 @@ Then run:
 
 ### Configuration
 
+#### In Model
+
 Custom Timestamps lets you do the following in your model to specify which columns should be used for created_at and updated_at:
 
     self.created_timestamp = :manufactured_on
@@ -34,6 +36,18 @@ It also supports updating multiple columns.
     self.updated_timestamp = [:redesigned_at, :redesign_release_date]
 
 You don't need to specify updated_at or updated_on in self.updated_at, and you don't need to specify created_at or created_on in self.created_at. Those columns are still updated by ActiveRecord (unless you overrode that).
+
+If you want to control whether your custom self.updated_timestamp column(s) will be updated on create also, and don't want to set that as an application-wide default or use the default, then:
+
+    self.update_custom_updated_timestamp_on_create = false # default is true
+
+#### In Application
+
+In environment.rb or wherever seems most appropriate, you can set the configuration option in one of two ways:
+
+    CustomTimestamps.update_custom_updated_timestamp_on_create = false # default is true
+
+Please set this one to either true or false to avoid issues if defaults change later.
 
 ### Usage
 
