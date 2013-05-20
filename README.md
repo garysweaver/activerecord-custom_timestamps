@@ -13,10 +13,6 @@ In your ActiveRecord/Rails 3.1+ project, add this to your Gemfile:
 
     gem 'activerecord-custom_timestamps'
 
-For the development version:
-
-    gem 'activerecord-custom_timestamps', :git => 'git://github.com/garysweaver/activerecord-custom_timestamps.git'
-
 Then run:
 
     bundle install
@@ -53,8 +49,13 @@ Please set this one to either true or false to avoid issues if defaults change l
 
 Just try to save and update an existing model that has the custom timestamp columns.
 
+## Authors
+
+This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyping.com) by the following contributors:
+* Gary Weaver (https://github.com/garysweaver)
+
 ### License
 
 Copyright (c) 2013 FineLine Prototyping, Inc., released under the [MIT license][lic].
 
-[lic]: http://github.com/garysweaver/activerecord-custom_timestamps/blob/master/LICENSE
+[lic]: http://github.com/FineLinePrototyping/activerecord-custom_timestamps/blob/master/LICENSE
