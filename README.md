@@ -1,5 +1,4 @@
-Custom Timestamps for ActiveRecord 3.x/4.x and Rails 3.x/4.x
-=====
+## Custom Timestamps for ActiveRecord 3.x/4.x and Rails 3.x/4.x
 
 Sometimes you may need to use timestamp columns other than created_at/created_on and updated_at/updated_on, e.g. when you are using a legacy database. Custom Timestamps lets you define one or more additional columns to update just like Rails updates created_at/created_on and/or updated_at/updated_on.
 
@@ -49,7 +48,7 @@ Please set this one to either true or false to avoid issues if defaults change l
 
 Just try to save and update an existing model that has the custom timestamp columns.
 
-## Authors
+### Authors
 
 This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyping.com) by the following contributors:
 * Gary Weaver (https://github.com/garysweaver)
