@@ -55,6 +55,6 @@ Just try to save and update an existing model that has the custom timestamp colu
 
 ### License
 
-Copyright (c) 2012 Gary S. Weaver, released under the [MIT license][lic].
+Copyright (c) 2013 FineLine Prototyping, Inc., released under the [MIT license][lic].
 
 [lic]: http://github.com/garysweaver/activerecord-custom_timestamps/blob/master/LICENSE
