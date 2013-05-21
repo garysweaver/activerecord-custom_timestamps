@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = CustomTimestamps::VERSION
   s.authors     = ['Gary S. Weaver']
   s.email       = ['garysweaver@gmail.com']
-  s.homepage    = 'https://github.com/garysweaver/activerecord-custom_timestamps'
+  s.homepage    = 'https://github.com/FineLinePrototyping/activerecord-custom_timestamps'
   s.summary     = %q{Custom Timestamps for ActiveRecord 3.x/4.x.}
   s.description = %q{Allows sets of custom timestamps for all or some models.}
   s.files = Dir['lib/**/*'] + ['Rakefile', 'README.md']
