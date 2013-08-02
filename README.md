@@ -1,10 +1,12 @@
-## Custom Timestamps for ActiveRecord 3.x/4.x
+[![Build Status](https://secure.travis-ci.org/FineLinePrototyping/activerecord-custom_timestamps.png?branch=master)][travis] [![Gem Version](https://badge.fury.io/rb/activerecord-custom_timestamps.png)][badgefury]
 
-Sometimes you may need to use timestamp columns other than created_at/created_on and updated_at/updated_on, e.g. when you are using a legacy database. Custom Timestamps lets you define one or more additional columns to update just like Rails updates created_at/created_on and/or updated_at/updated_on.
+## Custom Timestamps for ActiveRecord 3.1+/4.x
+
+Sometimes you may need to use timestamp columns other than created_at/created_on and updated_at/updated_on, e.g. when you are using a legacy database. Custom Timestamps lets you define one or more additional columns to update just like Rails updates created_at/created_on and/or updated_at/updated_on. In addition, it lets you define these columns in the model class and lets you define whether you want the application and/or model(s) to set the updated column(s) on creation.
 
 This does not change "timestamps" behavior in migrations. New models will continue to get updated_at/created_at or whatever you have designated, nor should it affect existing behavior in Rails (ActiveRecord::Timestamp) that looks for created_at/created_on and updated_at/updated_on and updates those on create/update.
 
-It uses the Rails/ActiveRecord 3.x-4.x self.record_timestamps to determine if it should update the date of the created_timestamp column(s) and should_record_timestamps? to determine if it should update the date of the updated_timestamp column(s) and it does these in the private create and update methods that then call super to execute the default ActiveRecord::Timestamp defined create and update methods.
+It uses the Rails 3.1+-4.x/ActiveRecord 3.1+-4.x self.record_timestamps to determine if it should update the date of the created_timestamp column(s) and should_record_timestamps? to determine if it should update the date of the updated_timestamp column(s) and it does these in the private create and update methods that then call super to execute the default ActiveRecord::Timestamp defined create and update methods.
 
 ### Setup
 
@@ -48,6 +50,16 @@ Please set this one to either true or false to avoid issues if defaults change l
 
 Just try to save and update an existing model that has the custom timestamp columns.
 
+### Using Without Rails
+
+If using Rails, the appropriate module will be included into ActiveRecord::Base for Rails 3 or 4 (the method names changed in 4).
+
+If you aren't using Rails, you'll want to include the appropriate module in your model or base model, e.g.
+
+```ruby
+include ActiveRecord::VERSION::MAJOR > 3 ? ::CustomTimestamps::Model : ::CustomTimestamps::Rails3Model
+```
+
 ### Authors
 
 This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyping.com) by the following contributors:
@@ -58,3 +70,6 @@ This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyp
 Copyright (c) 2013 FineLine Prototyping, Inc., released under the [MIT license][lic].
 
 [lic]: http://github.com/FineLinePrototyping/activerecord-custom_timestamps/blob/master/LICENSE
+[travis]: http://travis-ci.org/FineLinePrototyping/activerecord-custom_timestamps
+[badgefury]: http://badge.fury.io/rb/activerecord-custom_timestamps
+

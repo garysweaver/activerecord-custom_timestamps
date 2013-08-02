@@ -1,10 +1,15 @@
-require 'rake/testtask'
+require 'bundler/setup'
+require 'bundler/gem_tasks'
+require 'appraisal'
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.test_files = FileList['test/**/*_test.rb']
-  t.verbose = true
+task :default do |t|
+  if ENV['BUNDLE_GEMFILE'] =~ /gemfiles/
+    load 'test/custom_timestamps_test.rb'
+  else
+    exec 'bundle install && bundle exec rake appraise'
+  end
 end
 
-desc "Run tests"
-task :default => :test
+task :appraise => ['appraisal:install'] do |t|
+  exec 'bundle install && bundle exec rake appraisal'
+end

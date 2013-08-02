@@ -1,7 +1,7 @@
 require 'activerecord-custom_timestamps/config'
 
 module CustomTimestamps
-  module Model
+  module Rails3Model
     extend ActiveSupport::Concern
 
     included do
@@ -13,10 +13,10 @@ module CustomTimestamps
 
   private
 
-    def create_record
+    def create
       if self.record_timestamps
         current_time = current_time_from_proper_timezone
-
+        
         Array.wrap(self.created_timestamp).each do |column|
           if respond_to?(column) && respond_to?("#{column}=") && self.send(column).nil?
             write_attribute(column.to_s, current_time)
@@ -31,11 +31,11 @@ module CustomTimestamps
           end
         end
       end
-      
+
       super
     end
 
-    def update_record(*args)
+    def update(*args)
       if should_record_timestamps?
         current_time = current_time_from_proper_timezone
 

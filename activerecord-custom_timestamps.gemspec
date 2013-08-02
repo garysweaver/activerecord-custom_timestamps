@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.description = %q{Allows sets of custom timestamps for all or some models.}
   s.files = Dir['lib/**/*'] + ['Rakefile', 'README.md']
   s.license = 'MIT'
-  s.add_dependency 'activerecord'
+  s.add_dependency 'activerecord', '>= 3.1', '< 5'
 end
