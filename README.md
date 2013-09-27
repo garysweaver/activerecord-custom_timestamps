@@ -62,7 +62,7 @@ include ActiveRecord::VERSION::MAJOR > 3 ? ::CustomTimestamps::Model : ::CustomT
 
 ### Authors
 
-This app was written by [FineLine Prototyping, Inc.](http://www.finelineprototyping.com) by the following contributors:
+This was written by [FineLine Prototyping, Inc.](http://www.finelineprototyping.com) by the following contributors:
 * Gary Weaver (https://github.com/garysweaver)
 
 ### License
