@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: /Users/gary/github/FineLinePrototyping/activerecord-custom_timestamps
   specs:
     activerecord-custom_timestamps (0.2.0)
       activerecord (>= 3.1, < 5)
@@ -32,7 +32,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.1)
     rake (10.1.0)
-    sqlite3 (1.3.7)
+    sqlite3 (1.3.8)
     thread_safe (0.1.3)
       atomic
     tzinfo (0.3.38)
@@ -41,6 +41,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord (~> 4.0)
   activerecord-custom_timestamps!
   appraisal (~> 0.5.2)
   minitest (~> 4.7.5)
